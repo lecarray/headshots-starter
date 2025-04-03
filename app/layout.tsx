@@ -7,6 +7,7 @@ import AnnouncementBar from "@/components/homepage/announcement-bar"
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/homepage/theme-provider"
 import { validateConfig } from "@/lib/config";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 // Validate configuration at app initialization
 validateConfig();

@@ -7,6 +7,7 @@ import AnnouncementBar from "@/components/homepage/announcement-bar"
 import { Analytics } from "@vercel/analytics/react";
 import { ThemeProvider } from "@/components/homepage/theme-provider"
 import { validateConfig } from "@/lib/config";
+import Script from 'next/script'; // 添加这一行导入Script组件
 
 // Validate configuration at app initialization
 validateConfig();
@@ -48,6 +49,17 @@ export default function RootLayout({
           <Footer />
           <Toaster />
           <Analytics />
+          
+          {/* Google Analytics - 使用您提供的特定跟踪代码 */}
+          <Script src="https://www.googletagmanager.com/gtag/js?id=G-MYTMHRN5ME" strategy="afterInteractive" />
+          <Script id="google-analytics" strategy="afterInteractive">
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+              gtag('config', 'G-MYTMHRN5ME');
+            `}
+          </Script>
         </ThemeProvider>
       </body>
     </html>

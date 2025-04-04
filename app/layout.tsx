@@ -31,14 +31,14 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* 直接在head中添加Google Analytics代码 */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-G-5J6KLGYQRY"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-5J6KLGYQRY"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-G-5J6KLGYQRY');
+              gtag('config', 'G-5J6KLGYQRY');
             `
           }}
         />
